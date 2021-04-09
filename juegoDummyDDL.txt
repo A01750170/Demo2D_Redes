@@ -1,0 +1,8 @@
+CREATE TABLE Jugador(
+	nombreUsuario varchar(15) PRIMARY KEY NOT NULL,
+	clave varchar(20) NOT NULL,
+	correo varchar(100) UNIQUE NOT NULL,
+	fechaInicioJuego datetime,
+	fechaRegistro date DEFAULT GETDATE(),
+	fechaFinalizacionJuego datetime,
+);
