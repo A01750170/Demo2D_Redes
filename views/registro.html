@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, height=center, initial-scale=1"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="../public/css/styleRegistro.css"/>
+        <title>Regístrate</title>
+    </head>
+
+    <body class="estilo1">
+        <!-- Aquí inicia el header -->
+        <header>
+            <div class="container redondeado2">
+                <!--Inicio de la primera fila-->
+                <div class="row" > 
+                    <!--Registro y logo de STEAM-->
+                    <div class="col" style="margin: auto;">
+                        <h1 class="texto1">REGISTRO DE USUARIO</h1>
+                    </div>
+                    
+                    <div class="col-sm" style="text-align: right;">
+                        <a href="https://movimientosteam.org/">
+                            <img src="../public/images/logo-steam.png" class="imagen1"/> 
+                        </a>
+                    </div>
+                </div>
+                <!--Aquí termina la primera fila-->
+                
+                <!--Instrucciones-->
+                <p class="texto1">Por favor, llena lo siguientes campos:</p>
+            </div>
+        </header>
+		<!-- Aquí termina el header -->
+        
+        <!--Aquí inicia el formulario-->
+        <form action="#" method="GET">
+                <div class="container redondeado1" style="background-color: rgb(74, 110, 146);">
+                    <!--Inicia la primera fila del formulario-->
+                    <div class="row">
+                        <!--Nombre de usuario-->
+                        <div class="col-sm">
+                            <div class="form-group">
+                                <label><i>Nombre de usuario: *</i></label>
+                                <input type="text" class="form-control" placeholder="Ingresa tu nombre de usuario" id="nombreUsuario" name="nombreUsuario" required>
+                            </div>
+                        </div>
+                        
+                        <!--Contraseña-->
+                        <div class="col-sm">
+                            <div class="form-group">
+                                <label><i>Contraseña: *</i></label>
+                                <input type="password" class="form-control" placeholder="Ingresa tu contraseña" id="passwordUsuario" name="passwordUsuario" required>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Aquí termina la primera fila del formulario-->
+
+                    <!--Inicia la segunda fila del formulario-->
+                    <div class="row">
+                        <!--Fecha de nacimiento-->
+                        <div class="col">
+                            <div class="form-group ">
+                                <label><i>Ingresa tu fecha de nacimiento: *</i></label>	
+                                <br/>
+                                <input type="date" class="form-control" id="fechaNac" required>
+                            </div>
+                        </div>
+                        
+                        <!--Géneros-->							
+                        <div class="col">
+                            <div class="form-group dropdown">
+                                <label><i>¿Con qué género te identificas? *</i></label>
+                                <br/>
+                                <button type="button" class="btn btn-outline-light dropdown-toggle" data-toggle="dropdown" required>Género</button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Masculino</a>
+                                    <a class="dropdown-item" href="#">Femenino</a>
+                                    <a class="dropdown-item" href="#">No binario</a>
+                                    <a class="dropdown-item" href="#">Otros</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Aquí termina la segunda fila del formulario-->
+                    
+                    <!--Aquí inicia la tercera fila del formulario-->
+                    <div class="row">
+                        <!--Interéses de carrera-->
+                        <div class="col">
+                            <div class="form-group">
+                                <label><i>¿Qué quieres ser de grande? *</i></label>
+                                <input type="text" class="form-control" placeholder="Médico, Abogado, Veterinario..." id="serDeGrande" required>
+                            </div>
+                        </div>
+                        
+                        <!--Familia con ingeniería-->
+                        <div class="col">
+                            <div class="form-group dropdown">
+                                <label><i>¿Tus padres o algún familiar cercano es ingeniero? *</i></label>
+                                <br/>
+                                <button type="button" class="btn btn-outline-light dropdown-toggle" data-toggle="dropdown" required>Selecciona</button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Sí</a>
+                                    <a class="dropdown-item" href="#">No</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    <!--Aquí cierra la tercera fila del formulario-->
+                    
+                    <!--Aquí inicia la cuarta fila del formulario-->
+                    <div class="row">
+                        <!--Carreras STEAM-->
+                        <div class="col-sm">
+                            <div class="form-group">
+                                <label><i>¿Sabes qué es una carrera STEAM? Descríbela: *</i></label>
+                                <input type="text" class="form-control" placeholder="Una carrera STEAM es...." id="STEAM?" name="STEAM?" required>
+                            </div>
+                        </div>
+                        
+                        <!--Preferencia por ingenierías-->
+                        <div class="col">
+                            <div class="form-group dropdown">
+                                <label><i>¿Has pensado en estudiar ingeniería? *</i></label>
+                                <br/>
+                                <button type="button" class="btn btn-outline-light dropdown-toggle" data-toggle="dropdown" required>Selecciona</button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Sí</a>
+                                    <a class="dropdown-item" href="#">No</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Aquí cierra la cuarta fila del formulario-->
+
+                <!--Aquí inicia la quinta fila del formulario-->
+                <div class="row">
+                    <!--Escolaridad y nacionalidad-->
+                    <div class="col-sm">
+                        <div class="form-group">
+                            <label><i>Escolaridad: *</i></label>
+                            <input type="text" class="form-control" placeholder="Ej: Primaria, Secundaria, No aplica..." id="escolaridad" name="escolaridad" required>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="form-group dropdown">
+                            <label><i>¿En qué estado vives? *</i></label>
+                            <br/>
+                            <button type="button" class="btn btn-outline-light dropdown-toggle" data-toggle="dropdown" required>Estado</button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Aguascalientes</a>
+                                <a class="dropdown-item" href="#">Baja California Norte</a>
+                                <a class="dropdown-item" href="#">Baja California Sur</a>
+                                <a class="dropdown-item" href="#">Campeche</a>
+                                <a class="dropdown-item" href="#">Ciudad de México</a>
+                                <a class="dropdown-item" href="#">Coahuila</a>
+                                <a class="dropdown-item" href="#">Colima</a>
+                                <a class="dropdown-item" href="#">Chiapas</a>
+                                <a class="dropdown-item" href="#">Chihuahua</a>
+                                <a class="dropdown-item" href="#">Durango</a>
+                                <a class="dropdown-item" href="#">Estado de México</a>
+                                <a class="dropdown-item" href="#">Guanajuato</a>
+                                <a class="dropdown-item" href="#">Guerrero</a>
+                                <a class="dropdown-item" href="#">Hidalgo</a>
+                                <a class="dropdown-item" href="#">Jalisco</a>
+                                <a class="dropdown-item" href="#">Michoacán</a>
+                                <a class="dropdown-item" href="#">Morelos</a>
+                                <a class="dropdown-item" href="#">Nayarit</a>
+                                <a class="dropdown-item" href="#">Nuevo León</a>
+                                <a class="dropdown-item" href="#">Oaxaca</a>
+                                <a class="dropdown-item" href="#">Puebla</a>
+                                <a class="dropdown-item" href="#">Querétaro</a>
+                                <a class="dropdown-item" href="#">Quintana Roo</a>
+                                <a class="dropdown-item" href="#">San Luis Potosí</a>
+                                <a class="dropdown-item" href="#">Sinaloa</a>
+                                <a class="dropdown-item" href="#">Sonora</a>
+                                <a class="dropdown-item" href="#">Tabasco</a>
+                                <a class="dropdown-item" href="#">Tamaulipas</a>
+                                <a class="dropdown-item" href="#">Tlaxcala</a>
+                                <a class="dropdown-item" href="#">Veracruz</a>
+                                <a class="dropdown-item" href="#">Yucatán</a>
+                                <a class="dropdown-item" href="#">Zacatecas</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Aquí cierra la quinta fila del formulario-->
+
+                <!--Aquí inicia la sexta fila-->
+                <div class="row">
+                    <!--Correo-->
+                    <div class="col">
+                        <div class="form-group">
+                            <label><i>Correo electrónico: *</i></label>
+                            <input type="text" class="form-control" placeholder="Ingresa tu correo electrónico" id="correo" name="correo" required>
+                        </div>
+                    </div>
+                </div>
+                <!--Aquí termina la sexta fila del formulario-->
+                
+                <!--Explicación de campos obligatorios-->
+                <p>* Obligatorio</p>
+                
+                <!--Botones de enviar y limpiar el formulario-->
+                <div class="container" style="text-align: center;">
+                    <button class="btn btn-success" type="submit">Enviar</button>
+                    <button class="btn btn-danger" type="reset">Limpiar</button>
+                </div>
+            </div>
+            <!--Aquí termina el container-->
+        </form>
+        <!--Aquí termina el formulario-->
+        
+        <!-- Scripts necesarios -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+        
+        <!--Aquí inicia el footer-->
+        <footer></footer>
+        <!--Aquí termina el footer-->
+    </body>
+    <!--Aquí termina el body-->
+</html>
+<!--Fin de la página-->     
