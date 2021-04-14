@@ -4,25 +4,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking; //Para red. UnityWebRequest
-using Newtonsoft.Json; //jSON CONVERT
+using Newtonsoft.Json; 
 using UnityEngine.SceneManagement;
 /*
 * Registra un usuario haciendo uso de una solicitud GET
 * a través de NodeJS para insertar los datos en una base de datos de SQL Express
-* Autor: Erick Hernandezx SIlva
+* Autor: Erick Hernandez Siva, Erick Alberto Bustos Cruz, Edna Jacqueline Zavala,
+* Israel Sánchez Miranda, David Rodriguez Fragoso
 */
 
 public class Red : MonoBehaviour
 {
    public DateTime Today { get; }
    public static string nombreUsuarioJugador;
+
    //Campos con la información usuario y password
    public Text textoUsuarioRegistro;
    public Text textoPasswordRegistro;
    public Text textoUsuarioInicio;
    public Text textoPasswordInicio;
-   
    public Text textoCorreo;
+
    //Variable para guardar el resultado de la operación
    public Text resultado;
 
@@ -35,35 +37,17 @@ public class Red : MonoBehaviour
       public string fechaFinalizacionJuego;
       public string fechaRegistro;
    }
-   //Estructura que guarda los datos del usuario
-   public DatosUsuario datos;
 
-    public void RegistrarURL(){ //Metodo asociado al botón
-      //Concurrente
-      StartCoroutine(SubirRegistroURL()); //Paralelo
-   }
-
-   //Sube los datos en la URL con una peticion GET :D.
-   private IEnumerator SubirRegistroURL()
-   {
-      string cadena = "http://localhost:8080/usuario/registro" + textoUsuarioRegistro.text + "/" + textoPasswordRegistro.text;
-      print(cadena);
-      UnityWebRequest request = UnityWebRequest.Get(cadena);
-      yield return request.SendWebRequest(); //Regresa, ejecuta y espera....
-      if (request.result == UnityWebRequest.Result.Success){// 200
-         string textoPLano = request.downloadHandler.text;
-         resultado.text = "Registro exitoso";
-      }
-      else{
-         resultado.text = "Error en el registro: " + request.responseCode;
-      }
-   }
-
-   public void RegistrarJSON(){ //Metodo asociado al botón
+    //Estructura que guarda los datos del usuario
+    public DatosUsuario datos;
+    
+   //Método Asociado a Botón de Registro
+   public void RegistrarJSON(){ 
       //Concurrente
       StartCoroutine(SubirRegistroJSON()); //Paralelo
    }
-   //Sube los datos en un JSON con una peticion POST :D.
+   
+   //Sube los datos en un JSON con una peticion POST.
    private IEnumerator SubirRegistroJSON()
    {
       datos.nombreUsuario = textoUsuarioRegistro.text;
@@ -85,11 +69,13 @@ public class Red : MonoBehaviour
       }
    }
    
-   public void IniciarSesion(){ //Metodo asociado al botón
+   //Metodo asociado al botón Iniciar Sesión
+   public void IniciarSesion(){ 
       //Concurrente
       StartCoroutine(IniciarSesionJugador()); //Paralelo
    }
-   //Sube los datos en un JSON con una peticion POST :D.
+   
+   //Sube los datos en un JSON con una peticion POST.
    private IEnumerator IniciarSesionJugador()
    {
       datos.nombreUsuario = textoUsuarioInicio.text;
@@ -98,14 +84,12 @@ public class Red : MonoBehaviour
       WWWForm forma = new WWWForm();
       //Se crea el JSON llamado "datosJSON"
       forma.AddField("datosJSON", JsonUtility.ToJson(datos));
-      //se envía el request
+      //Se envía el request
       UnityWebRequest request = UnityWebRequest.Post("http://localhost:8080/jugador/iniciarSesion",forma);
       yield return request.SendWebRequest(); //Regresa, ejecuta y espera....
       if (request.result == UnityWebRequest.Result.Success){// 200
          string result = request.downloadHandler.text;
          if (result == "success"){
-            //resultado.text = "Sesión iniciada";
-            //System.Threading.Thread.Sleep(10000);
             nombreUsuarioJugador = textoUsuarioInicio.text;
             SceneManager.LoadScene("EscenaMapa");
 
