@@ -23,6 +23,7 @@
     </explicitIncludes>
     <explicitExcludes>
       <Path>.idea</Path>
+      <Path>.vscode</Path>
       <Path>Demo2D_Plataforma_Data</Path>
       <Path>Library</Path>
       <Path>Logs</Path>
