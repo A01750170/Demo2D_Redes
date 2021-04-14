@@ -7,12 +7,14 @@ public class moneda : MonoBehaviour
 {
     public AudioSource efectoMoneda;
    //la moneda colisionó con otro objeto
+   public ParticleSystem hit;
    private void OnTriggerEnter2D(Collider2D other)
    {
        if (other.gameObject.CompareTag("Player")){
            //recolectar
            //print(message:"recolectando...");
            //dejar de dibujar moneda
+           hit.Play();
            efectoMoneda.Play();
            GetComponent<SpriteRenderer>().enabled = false;
            //prender la explosión
