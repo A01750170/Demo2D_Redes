@@ -9,8 +9,8 @@ using UnityEngine.SceneManagement;
 /*
 * Registra un usuario haciendo uso de una solicitud GET
 * a través de NodeJS para insertar los datos en una base de datos de SQL Express
-* Autor: Erick Hernandez Siva, Erick Alberto Bustos Cruz, Edna Jacqueline Zavala,
-* Israel Sánchez Miranda, David Rodriguez Fragoso
+* Autor: Erick Hernandez Siva, Edna Jacqueline Zavala Ortega, 
+Erick Alberto Bustos Cruz, Israel Sánchez Miranda, David Rodriguez Fragoso
 */
 
 public class Red : MonoBehaviour
